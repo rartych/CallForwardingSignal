@@ -1,0 +1,21 @@
+---
+# CAMARA Project - workflow configuration to manually run CAMARA OAS rules
+# see https://docs.github.com/en/actions/using-workflows/manually-running-a-workflow
+# 31.01.2024 - initial version
+
+name: Spectral manual run reuse
+
+on: workflow_dispatch
+ 
+concurrency:
+  group: ${{ github.ref }}-${{ github.workflow }}
+  cancel-in-progress: true
+
+permissions:
+  pull-requests: write
+  contents: write
+  issues: write
+
+jobs:
+  spectral_manual_run:
+    uses: rartych/.github/.github/workflows/spectral_oas_lint.yml@main 
