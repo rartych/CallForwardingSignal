@@ -6,7 +6,9 @@
 
 name: megaLinter
 
-on: # yamllint disable-line rule:truthy
+on: 
+  workflow_dispatch
+  
   # Pull Requests to main
   pull_request:
     branches: [master, main]
