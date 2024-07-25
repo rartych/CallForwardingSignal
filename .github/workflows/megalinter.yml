@@ -7,7 +7,7 @@
 name: megaLinter
 
 on: 
-  workflow_dispatch
+  workflow_dispatch:
   
   # Pull Requests to main
   pull_request:
