@@ -1,4 +1,4 @@
----
+nter---
 # MegaLinter GitHub Action configuration file
 # More info at https://megalinter.io
 # CAMARA Project - Github Action for Pull Reqests
@@ -30,4 +30,4 @@ permissions:
 
 jobs:
   megalinter:
-    uses: rartych/.github/.github/workflows/spectral_oas_lint_0_4.yml@main
+    uses: rartych/.github/.github/workflows/megalinter.yml@main
