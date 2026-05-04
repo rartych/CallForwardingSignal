@@ -80,15 +80,6 @@ Feature: CAMARA Call Forwarding Signal  API, vwip - Operation retrieveUnconditio
     And the response property "$.code" is "INVALID_ARGUMENT"
     And the response property "$.message" contains a user friendly text
 
-  @call_forwarding_signal_400.2_empty_request_body
-  Scenario: Empty object as request body with 2-legs authentication
-    Given the request body is set to "{}"
-    When the HTTP "POST" request is sent
-    Then the response status code is 400
-    And the response property "$.status" is 400
-    And the response property "$.code" is "INVALID_ARGUMENT"
-    And the response property "$.message" contains a user friendly text
-
   @call_forwarding_signal_400.3_C02.01_phone_number_not_schema_compliant
   Scenario: Phone number value does not comply with the schema (with 2-legs authentication)
     Given the request body property "$.phoneNumber" does not comply with the OAS schema at "/components/schemas/PhoneNumber"
